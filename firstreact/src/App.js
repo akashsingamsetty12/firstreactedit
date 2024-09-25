@@ -2,17 +2,18 @@ import "./App.css";
 function App() {
   return (
     <div>
-    <GetComponent/>
+    <GetComponent name="akash" age={12} gmail="akashsingad@gmail.com" />
+    <GetComponent name="ak" age={12} gmail="akashsingad@gmail.com" />
     <GetComponent/>
     </div>
   );
 }
-const GetComponent =()=>{
+const GetComponent =(props)=>{
   return(
     <div class="App">
-      <h1>Akash</h1>
-      <h1>18</h1>
-      <h1>@gmail.com</h1>
+      <h1>{props.name}</h1>
+      <h1>{props.age}</h1>
+      <h1>{props.gmail}</h1>
 
 
     </div>
