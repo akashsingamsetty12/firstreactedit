@@ -14,6 +14,7 @@ const GetComponent =()=>{
       <h1>18</h1>
       <h1>@gmail.com</h1>
 
+
     </div>
   );
 };
