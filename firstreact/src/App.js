@@ -6,11 +6,22 @@ function App(){
   const handle=(props)=>{
     setnewtask(props.target.value);
   };
+
   const addtask=()=>{
     const n=[todo,newtask];
     settodo(n);
-    
+  };
 
+  const deletetask =(taskname)=>{
+    const n=todo.filter((task)=>{
+      if(task===taskname){
+        return false;
+      }
+      else{
+        return true;
+      }
+    });
+settodo(n);
   };
   return(
   <div className="App">
@@ -18,7 +29,17 @@ function App(){
       <input type="text" onChange={handle}/>
       <button onClick={addtask}>add task</button>
     </div>
-    <div classname="second">{todo}</div>
+    <div classname="second">
+      {todo.map((task)=>{
+        return(
+        <div>
+          
+          <h1>{task}</h1>
+          <button onClick={() =>deletetask(task)}>X</button>
+        </div>
+        );
+      })}
+    </div>
   </div>
   );
 
