@@ -13,14 +13,7 @@ function App(){
   };
 
   const deletetask =(taskname)=>{
-    const n=todo.filter((task)=>{
-      if(task===taskname){
-        return false;
-      }
-      else{
-        return true;
-      }
-    });
+    const n=todo.filter((task)=> task!==taskname);
 settodo(n);
   };
   return(
