@@ -1,17 +1,13 @@
 import "./App.css";
 import { useState } from "react";
 function App(){
-const[age, setAge]=useState(0);
-const increase=()=>{
-  setAge(age+1);
-  console.log(age);
-};
+const [show,setshow]=useState("blue");
 
 return(
   <div>
-    {age}
-    <button onClick={increase}>Increase age</button>
-  </div>
+    <button onClick={()=>{setshow(show==="blue"?"red":"blue")}}>Show/Hide</button>
+<p style={{color:show}}>Hi my name is akash</p>
+</div>
 );
 }
 export default App;
